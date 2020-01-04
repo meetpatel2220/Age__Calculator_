@@ -1,4 +1,4 @@
-package in.tvac.akshaye.agecalculator;
+package in.md.meet.agecalculator;
 
 import android.app.DatePickerDialog;
 import android.graphics.Color;
@@ -9,9 +9,12 @@ import android.view.View;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 
 import java.util.Calendar;
 
@@ -21,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     EditText eday, emonth, eyear, eday1, emonth1, eyear1;
     MediaPlayer mysong;
 
+    private AdView mAdView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +51,13 @@ public class MainActivity extends AppCompatActivity {
         eday1 = findViewById(R.id.day1);
         emonth1 = findViewById(R.id.month1);
         eyear1 = findViewById(R.id.year1);
+
+        MobileAds.initialize(this, "ca-app-pub-4990616185549475~9391762331");
+
+        mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+
 
         t10.setOnClickListener(new View.OnClickListener() {
             @Override
