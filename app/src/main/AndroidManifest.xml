@@ -9,11 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <activity android:name="in.md.meet.agecalculator.Main2Activity"></activity>
-        <activity android:name="in.md.meet.agecalculator.MainActivity"
-            android:screenOrientation="portrait"
-            >
+        <activity android:name=".Main3Activity">
+        </activity>
+        <activity android:name=".Main2Activity" />
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,7 +24,7 @@
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-4990616185549475~9391762331"/>
+            android:value="ca-app-pub-4990616185549475~9391762331" />
     </application>
 
 </manifest>
